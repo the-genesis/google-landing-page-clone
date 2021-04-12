@@ -89,6 +89,12 @@ html {
     padding: 4px;
     width: 40px;
     height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.profile-icon:hover {
+    background-color: #F2F2F2;
 }
 
 .profile {
@@ -113,12 +119,12 @@ html {
     margin: auto;
     display: flex;
     justify-content: center;
-    width: 45%;
-    padding: 24px 0 32px 0;
+    width: 100%;
+    padding: 24px 0 18px 0;
 }
 
 .searchbar {
-    width: 100%;
+    width: 600px;
     height: 40px;
     background: #fff;
     display: flex;
@@ -128,6 +134,14 @@ html {
     z-index: 3;
     height: 44px;
     margin: 0 auto;
+    padding: 4px 48px 4px 48px;
+    background-image: url("assets/multicolored-mic.svg"), url("assets/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: right 12px top 8px, left 12px top 8px;
+    font-family: "Open-Sans", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .searchbar:hover {
@@ -135,10 +149,15 @@ html {
     border-color: rgba(223,225,229,0);
 }
 
+.searchbar:focus {
+    outline: none;
+}
+
 .buttons-container {
     margin: auto;
     display: flex;
     justify-content: center;
+    padding-bottom: 8px;
 }
 
 button {
@@ -179,6 +198,11 @@ button:hover {
     color: #222222
 }
 
+.texts-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .language-links {
     font-size: 13px;
     font-family: "Open Sans", sans-serif;
@@ -195,6 +219,7 @@ button:hover {
     padding: 0 15px;
     display: flex;
     background-color: #F2F2F2;
+    align-items: center;
 }
 
 .top {
@@ -202,8 +227,15 @@ button:hover {
     justify-content: left;
 }
 
+.part-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
 .bottom {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .nigeria {
@@ -225,7 +257,7 @@ button:hover {
 }
 
 .footer-bottom-middle {
-    padding: 15px;
+    margin-left: 100px;
 }
 
 .little-leaf {
@@ -240,19 +272,46 @@ button:hover {
 }
 
 
+
 /* MEDIA QUERIES*/
 
-@media screen and (max-width:768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .searchbar-container {
+        width: 100%;
+    }
+
+    .logo-container img {
+        width: 250px;
+    }
+
     .searchbar {
-        width: 60%;
+        width: 90%;
+    }
+
+    .texts-wrapper {
+        flex-direction: column;
+    }
+
+    .language-links-wrapper {
+        padding-top: 8px;
+    }
+
+    .footer a {
+        padding: 8px 15px;
+    }
+
+    .footer-bottom-right .footer-bottom-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer-bottom-middle {
+        display: none;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .wrapper {
-        padding: 0 24px;
-    }
+@media screen and (min-width: 440px) and (max-width: 768px) {
     .searchbar {
-        width: 100%;
+        width: 70%;
     }
 }
