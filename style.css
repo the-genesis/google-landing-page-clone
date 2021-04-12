@@ -242,13 +242,13 @@ button:hover {
 
 /* MEDIA QUERIES*/
 
-@media screen (max-width:768px) {
+@media screen and (max-width:768px) {
     .searchbar {
         width: 60%;
     }
 }
 
-@media screen (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .wrapper {
         padding: 0 24px;
     }
