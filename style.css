@@ -238,3 +238,21 @@ button:hover {
     padding-top: 15px;
     padding-left: 0px;
 }
+
+
+/* MEDIA QUERIES*/
+
+@media screen (max-width:768px) {
+    .searchbar {
+        width: 60%;
+    }
+}
+
+@media screen (max-width: 480px) {
+    .wrapper {
+        padding: 0 24px;
+    }
+    .searchbar {
+        width: 100%;
+    }
+}
